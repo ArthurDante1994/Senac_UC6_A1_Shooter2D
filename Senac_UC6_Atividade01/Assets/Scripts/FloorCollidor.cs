@@ -16,7 +16,7 @@ public class FloorCollidor : MonoBehaviour
     {
         if (canJump == true)
         {
-            Debug.Log("Esta no Chao o personagem!!!");
+           // Debug.Log("Esta no Chao o personagem!!!");
         }
     }
     private void OnTriggerEnter(Collider collider)
