@@ -13,16 +13,23 @@ public class PlayerController : MonoBehaviour
     private Vector3 gravidade;
     private CharacterController cc;
     public Transform floorCollidor;
+
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealthBar healthbar;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         cc = GetComponent<CharacterController>();
+        currentHealth = maxHealth;
+        healthbar.setmaxhealth(maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
+        testdamege();
         Vector3 moviment = Input.GetAxis("Vertical") * transform.TransformDirection(Vector3.forward) * MoveSpeed;
 
         transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal") * RotationSpeed * Time.deltaTime, 0));
@@ -72,6 +79,19 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetTrigger("Pula");
             }
+        }
+    }
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthbar.sethealth(currentHealth);
+    }
+
+    public void testdamege()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            TakeDamage(20);
         }
     }
 }
