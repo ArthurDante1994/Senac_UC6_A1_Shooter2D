@@ -7,9 +7,16 @@ using UnityEngine.SceneManagement;
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
+    public Text pontuacao;
     public Gradient gradient;
     public Image fill;
     public float vida;
+    private int pontos = 0;
+
+    void Start()
+    {
+        pontuacao.text = pontos.ToString();
+    }
 
     public void setmaxhealth(int health)
     {
@@ -24,8 +31,14 @@ public class HealthBar : MonoBehaviour
         fill.color = gradient.Evaluate(slider.normalizedValue);
         vida = health;
     }
+    public void setpontos(int pont)
+    {
+        pontos += pont;
+        pontuacao.text = pontos.ToString();
+    }
     void Update()
     {
+        //pontuacao.text = pontos.ToString();
         if(vida <= 0)
         {
             SceneManager.LoadScene(0);
