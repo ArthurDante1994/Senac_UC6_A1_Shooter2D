@@ -1019,7 +1019,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 481089898}
-        m_MethodName: exits
+        m_MethodName: exitsgame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
