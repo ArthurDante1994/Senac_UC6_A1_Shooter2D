@@ -12,10 +12,15 @@ public class HealthBar : MonoBehaviour
     public Image fill;
     public float vida;
     private int pontos = 0;
+    private int chaves = 0;
+    public GameObject primeirachave;
+    public GameObject segundachave;
 
     void Start()
     {
         pontuacao.text = pontos.ToString();
+        primeirachave.SetActive(false);
+        segundachave.SetActive(false);
     }
 
     public void setmaxhealth(int health)
@@ -35,6 +40,22 @@ public class HealthBar : MonoBehaviour
     {
         pontos += pont;
         pontuacao.text = pontos.ToString();
+    }
+    public void setchaves(int chav)
+    {
+        chaves += chav;
+        switch(chaves)
+      {
+          case 1:
+                primeirachave.SetActive(true);
+            break;
+          case 2:
+                segundachave.SetActive(true);
+            break;
+            default:
+                Debug.Log("Não tem chaves o jogador");
+            break;
+        }
     }
     void Update()
     {

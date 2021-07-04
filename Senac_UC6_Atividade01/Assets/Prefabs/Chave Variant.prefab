@@ -26,6 +26,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gate: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!114 &8727269783052607863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,17 +51,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9e9d374ee5637d8438489b1a9533e8a6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 52.666
+      value: 77.28634
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9e9d374ee5637d8438489b1a9533e8a6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.37
+      value: 2.4925182
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9e9d374ee5637d8438489b1a9533e8a6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.27
+      value: 14.842266
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9e9d374ee5637d8438489b1a9533e8a6,
         type: 3}
@@ -70,12 +71,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9e9d374ee5637d8438489b1a9533e8a6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9e9d374ee5637d8438489b1a9533e8a6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9e9d374ee5637d8438489b1a9533e8a6,
         type: 3}
@@ -120,7 +121,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 9e9d374ee5637d8438489b1a9533e8a6,
         type: 3}
       propertyPath: m_Name
-      value: Chave
+      value: Chave Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9d374ee5637d8438489b1a9533e8a6, type: 3}
